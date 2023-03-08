@@ -1,0 +1,36 @@
+def encode(password):
+    nums = [int(i) for i in password]
+    encoder = [(i + 3) % 10 for i in nums]
+    encoded = ''.join(str(i) for i in encoder)
+    return encoded
+
+
+def decode():
+    pass
+
+
+def main():
+    running = True
+    while True:
+        print('Menu')
+        print('------------- ')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit ')
+        print()
+        opt = int(input('Please enter an option:'))
+        if opt == 1:
+            user_password = input('Please enter your password to encode:')
+            new_password = encode(user_password)
+            print('Your password has been encoded and stored!')
+            continue
+        if opt == 2:
+            old_password = decode(new_password)
+            print(f'The encoded password is {new_password}, and the original password is {old_password}.')
+            print()
+        if opt == 3:
+            running = False
+
+
+if __name__ == '__main__':
+    main()
