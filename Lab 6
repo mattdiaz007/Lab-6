@@ -1,3 +1,4 @@
+# Matthew Diaz
 def encode(password):
     nums = [int(i) for i in password]
     encoder = [(i + 3) % 10 for i in nums]
