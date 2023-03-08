@@ -10,7 +10,6 @@ def decode():
 
 
 def main():
-    running = True
     while True:
         print('Menu')
         print('------------- ')
@@ -29,7 +28,7 @@ def main():
             print(f'The encoded password is {new_password}, and the original password is {old_password}.')
             print()
         if opt == 3:
-            running = False
+            break
 
 
 if __name__ == '__main__':
